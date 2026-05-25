@@ -17,9 +17,9 @@ import com.jcaa.usersmanagement.infrastructure.adapter.persistence.entity.UserEn
 
 import lombok.experimental.UtilityClass;
 
-// VIOLACIÓN Regla 4: clase con solo métodos de conversión que NO está anotada con @UtilityClass.
-// Sin @UtilityClass, Lombok no genera constructor privado y la clase puede instanciarse.
-// Además los métodos deberían ser static al no usar estado de instancia.
+// UserPersistenceMapper es una clase utilitaria de conversión de persistencia.
+// Usamos @UtilityClass para evitar instanciación accidental y garantizar que
+// todos los métodos sean estáticos.
 // Clean Code - Regla 13 (evitar clases utilitarias innecesarias):
 // Esta clase existe porque NO se usa MapStruct (regla 7 de Reglas 1.md: usar MapStruct como
 // única librería de mapeo). Al escribir mappers manualmente se crea una clase "utilitaria"

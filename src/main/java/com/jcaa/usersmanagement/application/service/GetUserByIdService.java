@@ -21,9 +21,7 @@ public final class GetUserByIdService implements GetUserByIdUseCase {
   private final GetUserByIdPort getUserByIdPort;
   private final Validator validator;
 
-  // VIOLACIÓN Regla 3: @Valid declarado en la implementación (@Override).
-  // Las constraints (@Valid, @NotNull, etc.) solo deben declararse en las interfaces (puertos),
-  // nunca en las clases concretas que las implementan.
+  // Validation constraints are declared on the input port rather than the implementation.
   @Override
   public UserModel execute(final GetUserByIdQuery query) {
     validateQuery(query);
