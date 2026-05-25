@@ -1,5 +1,14 @@
 package com.jcaa.usersmanagement.infrastructure.adapter.persistence.repository;
 
+// VIOLACIÓN Regla 4: import con wildcard (*) — se deben declarar imports específicos,
+// nunca usar comodines porque ocultan qué clases se están usando realmente.
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.List;
+import java.util.Optional;
+
 import com.jcaa.usersmanagement.application.port.out.DeleteUserPort;
 import com.jcaa.usersmanagement.application.port.out.GetAllUsersPort;
 import com.jcaa.usersmanagement.application.port.out.GetUserByEmailPort;
@@ -13,16 +22,9 @@ import com.jcaa.usersmanagement.domain.valueobject.UserId;
 import com.jcaa.usersmanagement.infrastructure.adapter.persistence.dto.UserPersistenceDto;
 import com.jcaa.usersmanagement.infrastructure.adapter.persistence.exception.PersistenceException;
 import com.jcaa.usersmanagement.infrastructure.adapter.persistence.mapper.UserPersistenceMapper;
+
 import lombok.RequiredArgsConstructor;
 import lombok.extern.java.Log;
-
-// VIOLACIÓN Regla 4: import con wildcard (*) — se deben declarar imports específicos,
-// nunca usar comodines porque ocultan qué clases se están usando realmente.
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.*;
 
 @Log
 @RequiredArgsConstructor
@@ -129,7 +131,7 @@ public final class UserRepositoryMySQL
       if (!resultSet.next()) {
         return Optional.empty();
       }
-      return Optional.of(persistenceMapper.fromResultSetToModel(resultSet));
+      return Optional.of(UserPersistenceMapper.fromResultSetToModel(resultSet));
     } catch (final SQLException exception) {
       throw PersistenceException.becauseFindByIdFailed(userId.value(), exception);
     }
@@ -143,7 +145,7 @@ public final class UserRepositoryMySQL
       if (!resultSet.next()) {
         return Optional.empty();
       }
-      return Optional.of(persistenceMapper.fromResultSetToModel(resultSet));
+      return Optional.of(UserPersistenceMapper.fromResultSetToModel(resultSet));
     } catch (final SQLException exception) {
       throw PersistenceException.becauseFindByEmailFailed(email.value(), exception);
     }
