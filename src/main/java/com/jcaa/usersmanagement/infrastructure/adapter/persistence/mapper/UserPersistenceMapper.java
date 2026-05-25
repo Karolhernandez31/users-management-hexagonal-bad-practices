@@ -1,5 +1,10 @@
 package com.jcaa.usersmanagement.infrastructure.adapter.persistence.mapper;
 
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
 import com.jcaa.usersmanagement.domain.enums.UserRole;
 import com.jcaa.usersmanagement.domain.enums.UserStatus;
 import com.jcaa.usersmanagement.domain.model.UserModel;
@@ -9,12 +14,8 @@ import com.jcaa.usersmanagement.domain.valueobject.UserName;
 import com.jcaa.usersmanagement.domain.valueobject.UserPassword;
 import com.jcaa.usersmanagement.infrastructure.adapter.persistence.dto.UserPersistenceDto;
 import com.jcaa.usersmanagement.infrastructure.adapter.persistence.entity.UserEntity;
-import lombok.experimental.UtilityClass;
 
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
+import lombok.experimental.UtilityClass;
 
 // VIOLACIÓN Regla 4: clase con solo métodos de conversión que NO está anotada con @UtilityClass.
 // Sin @UtilityClass, Lombok no genera constructor privado y la clase puede instanciarse.

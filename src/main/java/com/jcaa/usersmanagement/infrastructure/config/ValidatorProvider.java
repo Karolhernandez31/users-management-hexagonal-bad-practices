@@ -1,9 +1,10 @@
 package com.jcaa.usersmanagement.infrastructure.config;
 
+import org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator;
+
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
-import org.hibernate.validator.messageinterpolation.ParameterMessageInterpolator;
 import lombok.experimental.UtilityClass;
 
 // VIOLACIÓN Regla 4: clase con solo métodos estáticos que NO tiene @UtilityClass ni constructor privado.

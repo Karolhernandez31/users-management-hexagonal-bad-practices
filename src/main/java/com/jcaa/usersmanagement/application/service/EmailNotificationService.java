@@ -1,18 +1,19 @@
 package com.jcaa.usersmanagement.application.service;
 
-import com.jcaa.usersmanagement.application.port.out.EmailSenderPort;
-import com.jcaa.usersmanagement.domain.exception.EmailSenderException;
-import com.jcaa.usersmanagement.domain.model.EmailDestinationModel;
-import com.jcaa.usersmanagement.domain.model.UserModel;
-import java.util.Objects;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.java.Log;
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
 import java.util.Map;
+import java.util.Objects;
 import java.util.logging.Level;
+
+import com.jcaa.usersmanagement.application.port.out.EmailSenderPort;
+import com.jcaa.usersmanagement.domain.exception.EmailSenderException;
+import com.jcaa.usersmanagement.domain.model.EmailDestinationModel;
+import com.jcaa.usersmanagement.domain.model.UserModel;
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.java.Log;
 
 @Log
 @RequiredArgsConstructor

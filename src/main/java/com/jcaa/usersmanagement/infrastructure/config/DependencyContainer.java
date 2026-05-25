@@ -1,5 +1,7 @@
 package com.jcaa.usersmanagement.infrastructure.config;
 
+import java.sql.Connection;
+
 import com.jcaa.usersmanagement.application.port.in.CreateUserUseCase;
 import com.jcaa.usersmanagement.application.port.in.DeleteUserUseCase;
 import com.jcaa.usersmanagement.application.port.in.GetAllUsersUseCase;
@@ -20,7 +22,6 @@ import com.jcaa.usersmanagement.infrastructure.adapter.persistence.config.Databa
 import com.jcaa.usersmanagement.infrastructure.adapter.persistence.repository.UserRepositoryMySQL;
 import com.jcaa.usersmanagement.infrastructure.entrypoint.desktop.controller.UserController;
 
-import java.sql.Connection;
 import jakarta.validation.Validator;
 
 public final class DependencyContainer {
