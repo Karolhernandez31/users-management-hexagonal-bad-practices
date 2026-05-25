@@ -1,8 +1,9 @@
 package com.jcaa.usersmanagement.domain.valueobject;
 
-import com.jcaa.usersmanagement.domain.exception.InvalidUserEmailException;
 import java.util.Objects;
 import java.util.regex.Pattern;
+
+import com.jcaa.usersmanagement.domain.exception.InvalidUserEmailException;
 
 public record UserEmail(String value) {
 

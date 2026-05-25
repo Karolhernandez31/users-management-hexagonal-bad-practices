@@ -1,7 +1,8 @@
 package com.jcaa.usersmanagement.domain.valueobject;
 
-import com.jcaa.usersmanagement.domain.exception.InvalidUserNameException;
 import java.util.Objects;
+
+import com.jcaa.usersmanagement.domain.exception.InvalidUserNameException;
 
 public record UserName(String value) {
 

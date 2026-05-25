@@ -1,6 +1,7 @@
 package com.jcaa.usersmanagement.domain.model;
 
 import java.util.Objects;
+
 import lombok.Value;
 
 @Value

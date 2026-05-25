@@ -1,8 +1,10 @@
 package com.jcaa.usersmanagement.domain.valueobject;
 
-import at.favre.lib.crypto.bcrypt.BCrypt;
-import com.jcaa.usersmanagement.domain.exception.InvalidUserPasswordException;
 import java.util.Objects;
+
+import com.jcaa.usersmanagement.domain.exception.InvalidUserPasswordException;
+
+import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public final class UserPassword {
 
