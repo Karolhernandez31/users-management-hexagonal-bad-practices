@@ -7,8 +7,8 @@ import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
 import lombok.experimental.UtilityClass;
 
-// VIOLACIÓN Regla 4: clase con solo métodos estáticos que NO tiene @UtilityClass ni constructor privado.
-// Debería anotarse con @UtilityClass para evitar instanciación accidental y generar el constructor privado automáticamente.
+// Utility provider for Jakarta Bean Validation.
+// Lombok @UtilityClass prevents instantiation and exposes only static helpers.
 @UtilityClass
 public class ValidatorProvider {
 
